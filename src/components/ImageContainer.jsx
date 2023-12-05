@@ -1,17 +1,21 @@
-export default function ImageContainer() {
+export default function ImageContainer({
+  title,
+  imageSrc,
+  description,
+  classValue,
+  annualVistors,
+}) {
+  // some props name are not allowed in jsx like class, for that we use className or image
+
+  // this component is reusable.
+  // title, imageSrc, description, classValue are props that we can pass to the component and they can be different for each component
   return (
-    <div className="beach-container">
-      <h6>Beach name - beach location</h6>
-      <img
-        src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJlYWNofGVufDB8fDB8fHww"
-        alt="beach"
-      />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, eius!
-        Dolorum dolorem placeat nulla! Itaque, labore sapiente aliquid assumenda
-        sed, quas nulla fuga recusandae quo voluptas asperiores ullam odio!
-        Iusto.
-      </p>
+    <div className={classValue}>
+      <h6>{title}</h6>
+      <img src={imageSrc} alt={title} />
+      {/* we can use the same prop more times (like title) */}
+      <p>{description}</p>
+      <p>Annual visitors: {annualVistors}</p>
     </div>
   );
 }
