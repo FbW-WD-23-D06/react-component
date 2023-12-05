@@ -6,4 +6,6 @@
 
 **props**: create reusable component using props
 
+**props-with-map**: render array data using props und map
+
 **conditional-rendering**: learn conditional rendering
