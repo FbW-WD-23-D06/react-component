@@ -1,24 +1,12 @@
 import "./App.css";
-import ImageContainer from "./components/ImageContainer";
-import beaches from "./data/beaches.json";
 
 function App() {
   return (
     <>
+      {/* React Fragment */}
+      {/* if we need n HTML container to wrap one ore more elements, we can use a fragment to gain performance (a div costs more performance) */}
       <h1 className="text-align-center">Beaches</h1>
-      {beaches.map((beach) => {
-        return (
-          <ImageContainer
-            key={crypto.randomUUID()}
-            {...beach}
-            // title={beach.title}
-            // imageSrc={beach.imageSrc}
-            // description={beach.description}
-            // classValue="beach-container"
-            // annualVistors={beach.annualVistors}
-          />
-        );
-      })}
+      <p>text</p>
     </>
   );
 }
